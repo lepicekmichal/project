@@ -108,6 +108,8 @@ bool TypeAnalysis::runOnFunction(llvm::Function & f) {
                         genericRelational(ci);
                     } else if (s == "genericGt") {
                         genericRelational(ci);
+                    } else if (s == "genericDot") {
+                    	  state.update(ci, new AType(AType::Kind::R, AType::Kind::DV, AType::Kind::D));
                     } else if (s == "length") {
                         // result of length operation is always 
                         // double scalar

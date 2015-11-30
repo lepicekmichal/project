@@ -48,6 +48,8 @@ protected:
 
     bool genericAdd();
 
+    bool genericDot(llvm::Instruction::BinaryOps, llvm::Function *);
+
     bool genericArithmetic(llvm::Instruction::BinaryOps op, llvm::Function * fop);
 
     void doubleRelational(AType * lhs, AType * rhs, llvm::CmpInst::Predicate op, llvm::Function * fop);
